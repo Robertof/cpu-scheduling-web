@@ -25,6 +25,9 @@ module.exports = {
         args[0]['process.env']['IS_WEB'] = true
         return args
       })
+    // Remove relative `node_modules` resolution as this causes issue when developing locally
+    // using `npm link` / `yarn link`.
+    config.resolve.modules.delete('node_modules')
     // Finally, intercept the original `exclude` function of the `js` target and whitelist the
     // source code in node_module to allow proper compilation.
     const ruleExcludes = config.module.rule ('js').exclude
