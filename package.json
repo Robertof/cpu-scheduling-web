@@ -1,5 +1,8 @@
 {
-  "name": "so-project-web",
+  "name": "cpu-scheduling-web",
+  "author": "Roberto Frenna",
+  "description": "Easily schedule and plot arbitrary processes using FCFS, SJF and RR.",
+  "license": null,
   "version": "0.1.0",
   "private": true,
   "scripts": {
